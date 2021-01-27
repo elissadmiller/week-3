@@ -34,17 +34,43 @@ function pageLoad() {
   // 👇 YOUR CODE BEGINS HERE. DON'T CHANGE ANY OTHER CODE. 👇
 
   // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
-  console.log(database)
-  NumberOfProducts = database.products.length
-  Products = length.products
-  
-  let numberOfPromotions = database.promotions.length
 
-  promotion1Description = database.promotions[getRandomInt(numberOfPromotions)].description
-  promotion2Description = database.promotions[getRandomInt(numberOfPromotions)].description
-  promotion3Description = database.promotions[getRandomInt(numberOfPromotions)].description
-          
+    // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
+    console.log("my database: ")
+    console.log(database)
+    // DO NOT DELETE THIS 👆
+    products = database.products
+    numberOfProducts = database.products.length
+    
+    // Promotion 1
+    let promo1 = database.promotions[getRandomInt(database.promotions.length-1)]
 
+    promotion1Description = promo1.description
+    
+    promotion1Icon = '🤑' 
+      
+    if (promo1.type == "discount") {
+      promotion1Icon = '🤑'
+    } else if (promo1.type == "shipping") {
+      promotion1Icon = '🚛 '
+    } else if (promo1.type == "contest") {
+      promotion1Icon = '🎰'
+    }
+
+    //Promotion 2
+    let promo2 = database.promotions[getRandomInt(database.promotions.length-1)]
+
+    promotion2Description = promo2.description
+    
+    promotion2Icon = '🤑' 
+      
+    if (promo2.type == "discount") {
+      promotion2Icon = '🤑'
+    } else if (promo2.type == "shipping") {
+      promotion2Icon = '🚛 '
+    } else if (promo2.type == "contest") {
+      promotion2Icon = '🎰'
+    }
 
 
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
